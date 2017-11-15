@@ -1,0 +1,12 @@
+public class Foo {
+    private int x = 0;
+
+    public void foo() {
+	int x = 3;
+    	bah();
+    }
+
+    //public void bah() {
+    //	int z = 4;
+    //}
+}
