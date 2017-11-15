@@ -1,5 +1,6 @@
 package br.unb.cic.sa;
 
+import br.unb.cic.sa.export.Factory;
 import br.unb.cic.sa.model.Dependency;
 import br.unb.cic.sa.model.MethodDeclaration;
 import br.unb.cic.sa.model.TypeDeclaration;
@@ -82,7 +83,7 @@ public class UsageDependencies {
 
         soot.Main.main(args);
 
-        analyser.export();
+        Factory.singleton().getDefault().export(analyser.decls.values());
     }
 
     public void export() {
