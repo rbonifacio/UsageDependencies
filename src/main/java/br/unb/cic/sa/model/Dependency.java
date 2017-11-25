@@ -15,4 +15,5 @@ import lombok.Data;
 public class Dependency {
     private String typeName;
     private String memberName;
+    private DependencyType type = DependencyType.MethodCall;
 }

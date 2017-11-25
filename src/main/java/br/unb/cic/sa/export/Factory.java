@@ -20,4 +20,12 @@ public class Factory {
     public AbstractExporter getDefault() {
         return new DefaultExporter(new PrintStream(System.out));
     }
+
+    public AbstractExporter getExporter(String e) {
+        switch(e) {
+            case "default" : return new DefaultExporter(new PrintStream(System.out));
+            case "mdg" : return new MDGExporter(new PrintStream(System.out));
+            default: return new DefaultExporter(new PrintStream(System.out));
+        }
+    }
 }
