@@ -61,9 +61,15 @@ public class UsageDependencies {
                 })
         );
 
-        soot.Main.main(args);
+        try {
+            soot.Main.main(args);
+            Factory.singleton().getExporter("mdg").export(analyser.decls.values());
+        }
+        catch(Throwable t) {
+            t.printStackTrace();
+        }
 
-        Factory.singleton().getExporter("mdg").export(analyser.decls.values());
+
     }
 
     private static MethodDeclaration getMethodDeclarationDependencies(SootMethod m, Collection<Unit> unities) {

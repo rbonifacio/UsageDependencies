@@ -60,10 +60,10 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <version>1.6.0</version>
                 <configuration>
                     <mainClass>br.unb.cic.sa.UsageDependencies</mainClass>
-                    <commandlineArgs>-app -allow-phantom-refs -process-dir ./samples/foo</commandlineArgs>
+                    <commandlineArgs>-app -allow-phantom-refs -process-dir ./samples/mh</commandlineArgs>
                 </configuration>
             </plugin>
         </plugins>
